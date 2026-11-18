@@ -8,6 +8,22 @@ Projeto ARA0097 – Gerência de Configuração e Git
 
 
 
+
+# 📡 Vendas ISP — Controle de Pedidos Telecom
+
+Projeto prático de Engenharia de Software demonstrando a aplicação de **Upper CASE**, **Lower CASE** e **Integrated CASE** no cenário real de vendas de equipamentos eletrônicos (ONUs, OLTs, Roteadores e Cabos Fibra Óptica) para provedores de internet (ISPs).
+
+---
+
+## 1. Upper CASE (Requisitos → Análise → Projeto)
+
+### Requisitos do Sistema
+* **RF01 - Cálculo de Desconto Atacado:** Na compra de 10 ou mais unidades de um equipamento (ex: ONUs), aplicar 10% de desconto no valor total.
+* **RF02 - Validação e Baixa de Estoque:** O pedido só pode ser aprovado se houver estoque suficiente, abatendo a quantidade vendida em seguida.
+
+### Prompt Utilizado na IA
+> "Crie um diagrama UML de casos de uso para venda de equipamentos eletrônicos para provedores de internet (ISPs). Atores: Provedor e Vendedor. Inclua cotar equipamentos, consultar estoque e fechar pedido."
+
 ### Diagrama de Casos de Uso (UML)
 ```mermaid
 flowchart LR
@@ -31,6 +47,8 @@ flowchart LR
     UC03 -.->|extend: qtd >= 10| UC02
     UC04 -.->|include| UC01
     UC05 -.->|extend: sem saldo| UC04
+```
+
 ### Validação Humana (Análise Crítica do Diagrama)
 Após a geração inicial pela IA, foi realizada uma revisão técnica para garantir a fidelidade ao negócio de Telecom:
 
